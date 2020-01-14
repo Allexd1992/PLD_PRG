@@ -1,0 +1,194 @@
+﻿<Window x:Class="PLD_PRG.View.ViewMainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLD_PRG.View"
+        mc:Ignorable="d"
+        xmlns:mv="clr-namespace:PLD_PRG.ViewModel"
+        Title="PLAD-6000S" Height="720" Width="1080" 
+        MaxHeight="720" MaxWidth="1080"
+        MinHeight="720" MinWidth="1080"
+        ResizeMode="NoResize"
+        
+        
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="#FF2A2A33"
+        FontFamily="{DynamicResource MaterialDesignFont}" OpacityMask="#FF2A2A33">
+    <Window.DataContext>
+        <mv:MainWindowsViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <!--<ResourceDictionary Source="PLD_PRG.Dictionary1.xaml"/>-->
+        <Style TargetType="StackPanel" x:Key="Menu2">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=Menu,Path=IsChecked}" Value="True">
+                    <Setter  Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=Menu,Path=IsChecked}" Value="False">
+                    <Setter  Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="2" Margin="0,0,0,0" Grid.ColumnSpan="2"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"  />
+                <ColumnDefinition Width="65*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Menu -->
+            <!-- TODO: Here -->
+            <StackPanel Grid.Column="0" Background="#FF26262E" Style="{StaticResource Menu2 }" Margin="0,50,0,0"  >
+
+                <Button  ToolTip="Home page" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding IHomePage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Home1.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Reel" Background="Transparent"  BorderThickness="0" Height="50" Command="{Binding IReelPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Asset 6.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Vacuum" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding IVacuumPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\tmp3.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Target" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding ITargetPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Target.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Laser" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding ILaserPage}" Cursor="Hand">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\LaserW.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Scan" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding IScanPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Scan.png" Margin="5" />
+                </Button>
+                <Button ToolTip="Heater" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding IHeaterPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Heater2.png" Margin="3" />
+                </Button>
+
+
+                <Button ToolTip="Event log" Background="Transparent" BorderThickness="0"   Height="50" Command="{Binding IEventLogPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\EventLog.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Logs" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding ILogsPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Logs.png" Margin="3" />
+                </Button>
+                <Button  ToolTip="Diagnostic" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding IDiagnosticPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Diagn.png" Margin="3" />
+                </Button>
+                <Button ToolTip="Settings" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding ISettingPage}">
+                    <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Setting.png" Margin="3" />
+                </Button>
+            </StackPanel>
+            <Frame Grid.Column="1"
+                   NavigationUIVisibility="Hidden"
+                   Content="{Binding CurrentPage}"
+                   Opacity="1" Margin="0,50,0,0"/>
+        </Grid>
+        <Grid Grid.Row="0"   Background="#FF26262E" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="331*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <materialDesign:ColorZone Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"  CornerRadius="3" Height="50" Width="36">
+                <ToggleButton x:Name="Menu"  ToolTip="Menu"  Foreground="White" Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Margin="0,0,0,0" Height="50"   />
+            </materialDesign:ColorZone>
+
+            <Label  Grid.Column="1" 
+                    Foreground="White"  
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    FontSize="22" 
+                    FontFamily="Gotham Pro" 
+                    FontWeight="Bold" 
+                    BorderThickness="0" 
+                    Height="34" 
+                    Width="652" 
+                    HorizontalContentAlignment="Center" >
+                PLAD-6000S | PLD chambers by each control systems
+            </Label>
+
+            <StackPanel  Grid.Column="2" Background="#FF26262E" Orientation="Horizontal" FlowDirection="LeftToRight" Margin="4,4,4,4" HorizontalAlignment="Right">
+                <Label  Foreground="White" FontSize="25" FontFamily="Gotham Pro" FontWeight="Normal" VerticalAlignment="Center" Content="SuperOx "/>
+
+                <!--<materialDesign:Chip
+                Grid.Column="3"
+  Content="Chepikov Vsevolod"
+  Foreground="White"
+                HorizontalAlignment="Center"
+                Background="Black"
+  IsDeletable="True"
+  x:Name="ButtonsDemoChip"
+ 
+
+  ToolTip="Just a tool tip"
+  DeleteToolTip="Your friendly neighbour delete button">
+                    <materialDesign:Chip.Icon >
+                        <Label/>
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>-->
+
+
+
+            </StackPanel>
+        </Grid>
+
+
+
+        <StackPanel Grid.Row="2" Background="#FF26262E" Grid.ColumnSpan="2" VerticalAlignment="Center" />
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center"  Background="#FF26262E">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="76*"/>
+                <ColumnDefinition Width="81*"/>
+
+                <ColumnDefinition Width="810*"/>
+
+
+                <ColumnDefinition Width="108*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Label  Foreground="White" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="16" FontFamily="Gotham Pro Light" FontWeight="Normal" Margin="0,15,0,0"  Content="{Binding dTime}"/>
+
+            <Label  Foreground="White" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="16" FontFamily="Gotham Pro Light" Content="{Binding sTime}"/>
+
+
+            <Button Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Gotham Pro"
+             Style="{StaticResource MaterialDesignFlatButton}"
+             
+              ToolTip="Reset of alarm" Grid.ColumnSpan="2" Margin="2,0,0,0">
+                Reset
+            </Button>
+            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Gotham Pro"
+             Style="{StaticResource MaterialDesignFlatButton}"
+             
+              ToolTip="Save settings">
+                Save
+            </Button>
+            <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="75,0,0,0" Stroke="White" VerticalAlignment="Center" Width="2" Fill="White"/>
+            <materialDesign:Card
+             Background="#FF313139" Foreground="White" Padding="10" Grid.Column="3" Height="54" VerticalAlignment="Center">
+                <TextBlock TextWrapping="Wrap" Text="04.12.2019 10:44:35  Sistem is disconnect" FontFamily="Gotham Pro Light" VerticalAlignment="Center" Visibility="Visible" HorizontalAlignment="Stretch" FontSize="16" Foreground="Red"/>
+            </materialDesign:Card>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

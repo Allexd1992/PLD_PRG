@@ -1,0 +1,543 @@
+﻿<Page x:Class="PLD_PRG.View.PageReel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PLD_PRG.View"
+     
+      mc:Ignorable="d" 
+      
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="PageReel"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="#FF2A2A33"
+        FontFamily="{DynamicResource MaterialDesignFont}" OpacityMask="#FF2A2A33">
+
+    <Page.Resources>
+        <ResourceDictionary Source="FontStyle.xaml"/>
+        
+        
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="144*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="160*"/>
+                    <RowDefinition Height="11*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="65*"/>
+                </Grid.RowDefinitions>
+                <!-- Tension -->
+                <Grid Grid.Row="0" Background="Black" Margin="0,0,0,16" Grid.RowSpan="2">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label  Grid.Row="1" Grid.Column="1" Style="{StaticResource Tittle_St}" Content="TENSION"/>
+                    <Label  Grid.Row="3" Grid.Column="1" Style="{StaticResource General_St}" Content="Left tension" />
+                    <TextBox Grid.Column="5" Grid.Row="3"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro Light" ToolTip="Left tension  monitor">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="N" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+
+                    <TextBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Left tension setting" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="8" Width="26" Content="N" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Label  Grid.Row="5" Grid.Column="1" Style="{StaticResource General_St}" Content="Right tension"/>
+                    <TextBox Grid.Column="5" Grid.Row="5"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Right tension monitor">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="N" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+
+                    <TextBox Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Right tension setting" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="8" Width="26" Content="N" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </Grid>
+
+
+                <Grid Grid.Row="1" Background="Black" Margin="0,15,0,3" Grid.RowSpan="2">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="26*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="48*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="44*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="149*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1"   Style="{StaticResource Tittle_St}" Content="CLUTCH MONITOR" Width="149" Grid.Column="1" Margin="0,0,0,6" Grid.RowSpan="2"/>
+                    <Label  Grid.Row="3"  Style="{StaticResource General_St}" Content="Left lenght" HorizontalAlignment="Left" Margin="25,0,0,10" Width="85" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                    <TextBox Grid.Column="5"  Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="120"  FontFamily="Gotham Pro" ToolTip="Left tension monitor" Height="47">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="%" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Label Grid.Row="5" Style="{StaticResource General_St}" Content="Right lenght" Margin="25,1,0,3" Width="104" Grid.ColumnSpan="2" />
+                    <TextBox Grid.Column="5"  Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="120"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="39">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="%" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </Grid>
+
+                <Grid  Grid.Row="4" Background="Black" Margin="0,1,0,1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="149*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource Tittle_St}" Content="DRIVING SPEED"/>
+
+                    <TextBox Grid.Column="5" Grid.Row="3"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro Light" ToolTip="Driving speed current value">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="m/h" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15" FontFamily="Gotham Pro"/>
+
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Label Grid.Row="3" Grid.Column="1" Style="{StaticResource General_St}" FontSize="14" Content="Driving speed" />
+                    <TextBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="90" FontFamily="Gotham Pro" ToolTip="Driving speed setting value" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="8" Width="26" Content="m/h" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38" FontFamily="Gotham Pro"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </Grid>
+
+                <Grid  Grid.Row="6" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Background="Black" ToolTip="Clutch of reel procces">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="28*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <Label Foreground="White" Grid.Row="1" FontSize="14"  VerticalContentAlignment="Center" Content="CLUTCH" HorizontalAlignment="Left" FontFamily="Gotham Pro" Margin="4,0,0,1" Width="83" Grid.ColumnSpan="2" />
+                        <Button Grid.Row="2"  
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Run clutch" Background="Green" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3">
+                            <TextBlock Text="On" Style="{StaticResource btLabel}" />
+                        </Button>
+                        <Button Grid.Row="2"  
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Stop of clutch" Background="Red" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3" Grid.Column="2">
+                            <TextBlock Text="Off" Style="{StaticResource btLabel}" />
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="2" Background="Black" ToolTip="Direction of reel procces">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="28*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="1" Grid.ColumnSpan="4"    Style="{StaticResource Tittle_St}" Margin="4,0,0,0" Width="172" Content="FOWARD DIRECTION"  />
+                        <Button Grid.Row="2"  
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Left  of derections" Background="Green" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3">
+                            <TextBlock Text="Left" Style="{StaticResource btLabel}" />
+                        </Button>
+                        <Button Grid.Row="2"  
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Right  of derections" Background="#FF9C8446" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3" Grid.Column="2">
+                            <TextBlock Text="Right" Style="{StaticResource btLabel}" />
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Background="Black" ToolTip="Working mode of  reel procces" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="30*"/>
+                    </Grid.RowDefinitions>
+                    <!-- Time / Length -->
+                    <Label   Style="{StaticResource Tittle_St}" Content=" MODE" Margin="10,10,0,0"/>
+                    <materialDesign:ColorZone
+                                 Mode="PrimaryMid" Grid.Row="1" Background="Transparent" FontFamily="Ghotom ">
+                        <StackPanel Orientation="Horizontal"  Margin="25,0,14,0">
+                            <RadioButton x:Name="LenghtM"
+                                       Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="True" Content="Length" FontFamily="Gotham Pro" />
+                            <RadioButton x:Name="TimeM" Style="{StaticResource MaterialDesignTabRadioButton}" Margin="4" IsChecked="False" Content="Time" FontFamily="Gotham Pro" />
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <!-- Time Mode-->
+                    <Grid Style="{StaticResource ReelModeVisTime }" Background="Black" Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Time monitor">
+                            <TextBox.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="38" Width="90" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                            <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content=".sec" FontFamily="Gotham Pro" />
+                                            <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+
+                        <TextBox Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Time setting" >
+                            <TextBox.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                            <Label Foreground="Black" FontSize="8" Width="26" Content=".sec" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                            <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38"/>
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+                        <Button Grid.Column="5"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Reset taime value" Background="#FF9C8446">
+                            <TextBlock Text="RESET" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
+                        </Button>
+                    </Grid>
+                    <!-- Length Mode-->
+                    <Grid Style="{StaticResource ReelModeVisLight }" Background="Black"  Grid.Row="2"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Main length monitor">
+                            <TextBox.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                            <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="m" FontFamily="Gotham Pro" />
+                                            <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+
+                        <TextBox Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Main length setting" >
+                            <TextBox.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                            <Label Foreground="Black" FontSize="8" Width="26" Content="m" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                            <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12"  Text="1000" Width="38" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+                        <Button Grid.Column="5"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Reset main lenght value" Background="#FF9C8446">
+                            <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
+                        </Button>
+                    </Grid>
+                </Grid>
+                <!-- Length Mode-->
+                <Grid Grid.Row="1" Background="Black" Style="{StaticResource ReelModeVisLight }"></Grid>
+                <!-- Length Mode-->
+                <Grid Grid.Row="2" Background="Black" Style="{StaticResource ReelModeVisLight }">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="23*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="0*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Left lenght monitor">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="m" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Button Grid.Column="5" Grid.Row="0"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Reset left length value" Background="#FF9C8446">
+                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
+                    </Button>
+                    <Label  Grid.Row="0" Grid.Column="1" Style="{StaticResource General_St}"  Content="Left lenght" />
+                    <TextBox Grid.Column="3"  Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Eigth lenght monitor">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="40" Width="90" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="White" FontSize="8" Width="26" VerticalContentAlignment="Top" Content="m" FontFamily="Gotham Pro" />
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000" Width="38" Height="15"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Button Grid.Column="5" Grid.Row="2"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="40" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Reset right length value" Background="#FF9C8446">
+                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
+                    </Button>
+                    <Label  Grid.Row="2" Grid.Column="1" Style="{StaticResource General_St}" Content="Right lenght"  />
+
+
+                </Grid>
+                <Grid Grid.Row="4" Background="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="8*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource Tittle_St}">REEL DRIVING</Label>
+                    <TextBox Grid.Column="3" Grid.Row="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"   FontFamily="Gotham Pro" ToolTip="Run time monitor">
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="Gray"  Background="Gray" Height="38" Width="110" >
+                                    <TextBlock VerticalAlignment="Center" TextAlignment="Center"  FontSize="12" Text="1000"  Height="15"/>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+
+                    <TextBox Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" HorizontalAlignment="Center"  Width="110" FontFamily="Gotham Pro" ToolTip="Run time setting" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="110" >
+
+
+                                    <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38"/>
+
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Button Grid.Column="5" Grid.Row="3" 
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Reset run times value" Background="#FF9C8446">
+                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
+                    </Button>
+                    <Button Grid.Column="5" Grid.Row="5" 
+                          Style="{StaticResource MaterialDesignRaisedLightButton}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Stop reel process" Background="Red">
+                        <TextBlock Text="Stop" Style="{StaticResource btLabel}" />
+                    </Button>
+                    <Button Grid.Column="3" Grid.Row="5" 
+                          Style="{StaticResource  buttRed}"
+                          Height="38" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Run reel process" 
+                            Background="Green">
+                         <TextBlock Text="Run" Style="{StaticResource btLabel}" />
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!---->
+    </Grid>
+</Page>

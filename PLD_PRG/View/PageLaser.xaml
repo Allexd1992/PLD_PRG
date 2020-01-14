@@ -1,0 +1,374 @@
+﻿<Page x:Class="PLD_PRG.View.PageLaser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PLD_PRG.View"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:mv="clr-namespace:PLD_PRG.ViewModel"
+      mc:Ignorable="d" 
+      Title="PageLaser"
+      d:DesignHeight="600" d:DesignWidth="1000"     
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="#FF2A2A33"
+        FontFamily="{DynamicResource MaterialDesignFont}" OpacityMask="#FF2A2A33">
+
+    <Page.DataContext>
+        <mv:PageLaserViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+
+        <ResourceDictionary Source="FontStyle.xaml"/>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Grid.RowSpan="5" Margin="5" Background="Black" Visibility="Visible">
+                <Grid Grid.Row="1" Margin="0" Background="#FF151519" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="43*"/>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="PRESSURE:"   Grid.Column="1" Grid.Row="1" Style="{StaticResource General_St}" Height="26" Width="90"/>
+                    <Label Content="REPRATE:"   Grid.Column="1" Grid.Row="2" Style="{StaticResource General_St}" Height="26" Width="81"/>
+                    <Label Content="SHUTTER:"   Grid.Column="1" Grid.Row="3" Style="{StaticResource General_St}" Height="25" Width="81"  />
+                    <Label Content="EGY:"   Grid.Column="1" Grid.Row="4" Style="{StaticResource General_St}" Height="26" Width="43"  />
+                    <Label Content="HV:"   Grid.Column="1" Grid.Row="5"  Style="{StaticResource General_St}" Height="26" Width="34"  />
+                    <Label Content="COUNTER:"   Grid.Column="1" Grid.Row="6" Style="{StaticResource General_St}" Height="26" Width="86"   />
+                    <Label Content="COUNTER NEW FILL:"   Grid.Column="1" Grid.Row="7" Style="{StaticResource General_St}" Height="26" Width="160"/>
+                    <Label Content="TRIGGER:"   Grid.Column="4" Grid.Row="1" Style="{StaticResource General_St}" Height="24" Width="87"   />
+                    <Label Content="TUBETEMP:"   Grid.Column="4" Grid.Row="2"  Style="{StaticResource General_St}" Height="23" Width="92"  />
+                    <Label Content="MODE:"   Grid.Column="4" Grid.Row="3"   Style="{StaticResource General_St}" Height="23" Width="79" />
+                    <Label Content="OPMODE:"   Grid.Column="4" Grid.Row="4"  Style="{StaticResource General_St}" Height="23" Width="87"   />
+                    <Label Content="STATUS CODE:"   Grid.Column="4" Grid.Row="5"   Style="{StaticResource General_St}" Height="24" Width="122" Grid.ColumnSpan="2"   />
+                    <Label Content="TIME:"   Grid.Column="4" Grid.Row="6"    Style="{StaticResource General_St}" Height="24" Width="55"  />
+
+                    <Label Content="{Binding pressure,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="2" Grid.Row="1" Style="{StaticResource General_St}" Height="10" Width="10"/>
+                    <Label Content="{Binding reprate,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="2" Grid.Row="2"  Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding shutter,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="2" Grid.Row="3" Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding egy,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="2" Grid.Row="4"    Style="{StaticResource General_St}" Height="10" Width="10"/>
+                    <Label Content="{Binding hv,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="2" Grid.Row="5"    Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding counter,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="2" Grid.Row="6"     Style="{StaticResource General_St}" Height="10" Width="10"/>
+                    <Label Content="{Binding counterNewFill,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="2" Grid.Row="7"  Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding trigger,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="5" Grid.Row="1"    Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding tubeTemp,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="5" Grid.Row="2"   Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding mode,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="5" Grid.Row="3"    Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding opMode,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="5" Grid.Row="4"  Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding stCod,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="5" Grid.Row="5"    Style="{StaticResource General_St}" Height="10" Width="10" />
+                    <Label Content="{Binding techTime,UpdateSourceTrigger=PropertyChanged}"   Grid.Column="5" Grid.Row="6" Style="{StaticResource General_St}" Height="10" Width="10"   />
+
+                    <Label Content="mbar"   Grid.Column="2" Grid.Row="1" Style="{StaticResource General_St}" Height="24" Width="50" Grid.ColumnSpan="2" Margin="140,0,0,0" />
+                    <Label Content="Hz"   Grid.Column="2" Grid.Row="2" Style="{StaticResource General_St}" Height="23" Width="50" Grid.ColumnSpan="2" Margin="140,0,0,0" />
+                    <Label Content=""   Grid.Column="3" Grid.Row="3"  Style="{StaticResource General_St}" Height="23" Width="10"/>
+                    <Label Content="mJ"   Grid.Column="2" Grid.Row="4"  Style="{StaticResource General_St}" Height="23" Width="50" Grid.ColumnSpan="2" Margin="140,0,0,0"  />
+                    <Label Content="kV"   Grid.Column="2" Grid.Row="5"  Style="{StaticResource General_St}" Height="24" Width="41" Grid.ColumnSpan="2" Margin="140,0,0,0"  />
+                    <Label Content="pilses"   Grid.Column="2" Grid.Row="6" Style="{StaticResource General_St}" Height="24" Width="65" Grid.ColumnSpan="2" Margin="140,0,0,0"   />
+                    <Label Content="pilses"   Grid.Column="2" Grid.Row="7"  Style="{StaticResource General_St}" Height="24" Width="50" Grid.ColumnSpan="2" Margin="140,0,0,0"   />
+                    <Label Content=""   Grid.Column="6" Grid.Row="1"   Style="{StaticResource General_St}" Height="24" Width="10"  />
+                    <Label Content="C"   Grid.Column="6" Grid.Row="2" Style="{StaticResource General_St}" Height="23" Width="31" />
+                    <Label Content=""   Grid.Column="6" Grid.Row="3"  Style="{StaticResource General_St}" Height="23" Width="10"  />
+                    <Label Content=""   Grid.Column="6" Grid.Row="4"  Style="{StaticResource General_St}" Height="23" Width="10" />
+                    <Label Content=""   Grid.Column="6" Grid.Row="5"  Style="{StaticResource General_St}" Height="24" Width="10" />
+                    <Label Content="sec."   Grid.Column="6" Grid.Row="6" Style="{StaticResource General_St}" Height="24" Width="31"  />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="4" Margin="5" Background="#FF151519">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="0"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Label Foreground="White" Grid.Column="0" FontSize="14"  VerticalContentAlignment="Center" Content="TRIGGER" HorizontalAlignment="Left" FontFamily="Gotham Pro"  Width="129" Grid.ColumnSpan="2" Margin="10,8,0,1" Grid.RowSpan="2" />
+                    <RadioButton Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"  Background="White" Foreground="White" BorderBrush="White"  OpacityMask="White" FontSize="14"  IsChecked="{Binding BlCom}" >INTERNAL</RadioButton>
+                    <RadioButton Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"  Background="White" Foreground="White">EXTERNAL</RadioButton>
+                    <RadioButton Grid.Row="7" Grid.Column="1" VerticalAlignment="Center"  Background="White" Foreground="White">SCAN</RadioButton>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="2"  Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="5" Background="#FF151519">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="115*"/>
+                        <ColumnDefinition Width="12*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="44*"/>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="44*"/>
+
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <Label Foreground="White" FontSize="14"  VerticalContentAlignment="Center" Content="OUTPUT UNIT" HorizontalAlignment="Left" FontFamily="Gotham Pro"  Width="130" Grid.ColumnSpan="3"  Grid.Column="1" Margin="0,0,0,14" Grid.RowSpan="2" />
+                    <RadioButton Grid.Row="3" VerticalAlignment="Center"  Background="White" Foreground="White" BorderBrush="White"  OpacityMask="White" FontSize="14"  IsChecked="{Binding BlCom}" Height="19"  Grid.Column="1" Grid.ColumnSpan="2" >HV</RadioButton>
+                    <RadioButton Grid.Row="5" VerticalAlignment="Center"  Background="White" Foreground="White"  Height="18"  Grid.Column="1" Grid.ColumnSpan="2">Energy</RadioButton>
+                    <TextBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Left tension setting" Height="30" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="3"  BorderThickness="0" BorderBrush="White"  Background="White" Height="30" Width="90"  >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="6" Width="29" Content="kV" VerticalContentAlignment="Center"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="30"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBox Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Left tension setting" Height="30" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="3"  BorderThickness="0" BorderBrush="White"  Background="White" Height="30" Width="90"  >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="6" Width="29" Content="mJ" VerticalContentAlignment="Center"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="30"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="#FF151519" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="44*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Foreground="White" Grid.Row="1" FontSize="14"   Grid.Column="1" VerticalContentAlignment="Center" Content="RUNNING" HorizontalAlignment="Center" FontFamily="Gotham Pro"  Grid.ColumnSpan="2"   />
+                <Button Grid.Row="3"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Run clutch" Background="Green" Grid.ColumnSpan="3" Margin="12,5,12,7"   >
+                    <TextBlock Text="On" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
+                </Button>
+                <Button Grid.Row="3"   Grid.Column="3"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7"  >
+                    <TextBlock Text="Off" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
+                </Button>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="#FF151519">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="44*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Foreground="White" Grid.Row="1" FontSize="14"   Grid.Column="1" VerticalContentAlignment="Center" Content="SHUTTER" HorizontalAlignment="Center" FontFamily="Gotham Pro"  Grid.ColumnSpan="2"   />
+                <Button Grid.Row="3"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Run clutch" Background="Green" Grid.ColumnSpan="3" Margin="12,5,12,7"   >
+                    <TextBlock Text="Open" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
+                </Button>
+                <Button Grid.Row="3"   Grid.Column="3"
+                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
+                          materialDesign:ButtonAssist.CornerRadius="5"
+                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7"  >
+                    <TextBlock Text="Close" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
+                </Button>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="7"  Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="5" Background="#FF151519">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="21*"/>
+                        <ColumnDefinition Width="78*"/>
+                        <ColumnDefinition Width="14*"/>
+                        <ColumnDefinition Width="131*"/>
+                        <ColumnDefinition Width="14*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="44*"/>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="44*"/>
+
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <!--<Label Foreground="White" FontSize="14"  VerticalContentAlignment="Center" Content="OUTPUT UNIT" HorizontalAlignment="Left" FontFamily="Gotham Pro"  Width="130" Grid.ColumnSpan="3"  Grid.Row="1"  Grid.Column="1" />-->
+                    <RadioButton Grid.Row="1" VerticalAlignment="Center"  Background="White" Foreground="White" BorderBrush="White"  OpacityMask="White" FontSize="14"  IsChecked="{Binding BlCom}" Height="19" Grid.ColumnSpan="2" Margin="16,0,0,0" >Time</RadioButton>
+                    <RadioButton Grid.Row="3" VerticalAlignment="Center"  Background="White" Foreground="White"  Height="18" Grid.ColumnSpan="2" Margin="16,0,0,0">Count</RadioButton>
+                    <TextBox Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Left tension setting" Height="30" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="3"  BorderThickness="0" BorderBrush="White"  Background="White" Height="30" Width="90"  >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="6" Width="29" Content="min" VerticalContentAlignment="Center"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="30"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Left tension setting" Height="30" >
+                        <TextBox.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="5" Padding="3"  BorderThickness="0" BorderBrush="White"  Background="White" Height="30" Width="90"  >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                        <Label Foreground="Black" FontSize="6" Width="29" Content="" VerticalContentAlignment="Center"  FontFamily="Gotham Pro" />
+                                        <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="30"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="2"  Margin="5" Background="#FF151519">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="21*"/>
+                    <ColumnDefinition Width="127*"/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="103*"/>
+                    <ColumnDefinition Width="8*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Content="REPRATE"  Style="{StaticResource Tittle_St}"/>
+                <Label Grid.Row="3" Grid.Column="1" Style="{StaticResource General_St}" Content="Setting value"/>
+                <TextBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="90" FontFamily="Gotham Pro" ToolTip="Driving speed setting value" Height="40" >
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="5" Padding="10"  BorderThickness="0" BorderBrush="White"  Background="White" Height="40" Width="90" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                                    <Label Foreground="Black" FontSize="8" Width="26" Content="Hz" VerticalContentAlignment="Top"  FontFamily="Gotham Pro" />
+                                    <TextBox VerticalAlignment="Center" TextAlignment="Center"  Foreground="Black" FontSize="12" Text="1000" Width="38" FontFamily="Gotham Pro"/>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+
+            </Grid>
+            <Grid Grid.Row="10"  Background="#FF151519" Grid.ColumnSpan="10" Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="150*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="150*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Modbus server"   Grid.Column="1"     Style="{StaticResource Tittle_St}" FontSize="12"/>
+                <Label Content="Laser connect"   Grid.Column="4"     Style="{StaticResource Tittle_St}" FontSize="12"/>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="On" Style="{StaticResource Press}" Width="100" Height="30"  Margin="5" Command="{Binding BtnClkMbRun}" />
+                    <Button Content="Off" Width="100" Height="30" Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkMbStop}" Cursor="Hand"/>
+                </StackPanel>
+                <StackPanel Grid.Column="5" Orientation="Horizontal">
+                    <Button Content="Connect" Width="100" Height="30"  Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkComRun}"/>
+                    <Button Content="Disconnect" Width="100" Height="30" Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkComStop}"/>
+                </StackPanel>
+                <Ellipse HorizontalAlignment="Center" Height="20" Style="{StaticResource Led_Mb}" VerticalAlignment="Center" Width="20" Grid.Column="0"/>
+                <Ellipse HorizontalAlignment="Center" Height="20" Style="{StaticResource Led_Lc}" VerticalAlignment="Center" Width="20"   Grid.Column="3"/>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</Page>
