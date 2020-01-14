@@ -18,7 +18,7 @@
         FontFamily="{DynamicResource MaterialDesignFont}" OpacityMask="#FF2A2A33">
 
     <Page.DataContext>
-        <mv:PageLaserViewModel/>
+        <mv:LaserPageViewModel/>
     </Page.DataContext>
     <Page.Resources>
 

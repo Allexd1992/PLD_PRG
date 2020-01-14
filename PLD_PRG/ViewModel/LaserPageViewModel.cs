@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace PLD_PRG.ViewModel
 {
-    class PageLaserViewModel : INotifyPropertyChanged
+    class LaserPageViewModel : INotifyPropertyChanged
     {
         public virtual void OnPropertyChanged(string propertyName)
         {
