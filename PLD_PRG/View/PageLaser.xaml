@@ -259,7 +259,7 @@
                 <Button Grid.Row="3"   Grid.Column="3"
                           Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
                           materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7"  >
+                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7" Cursor="Hand"  >
                     <TextBlock Text="Close" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
                 </Button>
             </Grid>
@@ -356,12 +356,12 @@
                 <Label Content="Modbus server"   Grid.Column="1"     Style="{StaticResource Tittle_St}" FontSize="12"/>
                 <Label Content="Laser connect"   Grid.Column="4"     Style="{StaticResource Tittle_St}" FontSize="12"/>
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Button Content="On" Style="{StaticResource Press}" Width="100" Height="30"  Margin="5" Command="{Binding BtnClkMbRun}" />
-                    <Button Content="Off" Width="100" Height="30" Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkMbStop}" Cursor="Hand"/>
+                    <Button Content="On" Template="{StaticResource btGreenTemplate}" Width="100" Height="30"  Margin="5" Command="{Binding BtnClkMbRun}" />
+                    <Button Content="Off" Template="{StaticResource btGreenTemplate}" Width="100" Height="30" Margin="5"   Command="{Binding BtnClkMbStop}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="5" Orientation="Horizontal">
-                    <Button Content="Connect" Width="100" Height="30"  Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkComRun}"/>
-                    <Button Content="Disconnect" Width="100" Height="30" Margin="5" Style="{StaticResource Press}" Command="{Binding BtnClkComStop}"/>
+                    <Button Content="Connect" Width="100" Height="30"  Margin="5" Template="{StaticResource btGreenTemplate}" Command="{Binding BtnClkComRun}"/>
+                    <Button Content="Disconnect" Width="100" Height="30" Margin="5" Template="{StaticResource btGreenTemplate}" Command="{Binding BtnClkComStop}"/>
                 </StackPanel>
                 <Ellipse HorizontalAlignment="Center" Height="20" Style="{StaticResource Led_Mb}" VerticalAlignment="Center" Width="20" Grid.Column="0"/>
                 <Ellipse HorizontalAlignment="Center" Height="20" Style="{StaticResource Led_Lc}" VerticalAlignment="Center" Width="20"   Grid.Column="3"/>
