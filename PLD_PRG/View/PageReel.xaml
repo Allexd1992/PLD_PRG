@@ -247,18 +247,10 @@
                             <RowDefinition Height="10*"/>
                         </Grid.RowDefinitions>
                         <Label Foreground="White" Grid.Row="1" FontSize="14"  VerticalContentAlignment="Center" Content="CLUTCH" HorizontalAlignment="Left" FontFamily="Gotham Pro" Margin="4,0,0,1" Width="83" Grid.ColumnSpan="2" />
-                        <Button Grid.Row="2"  
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Run clutch" Background="Green" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3">
-                            <TextBlock Text="On" Style="{StaticResource btLabel}" />
-                        </Button>
-                        <Button Grid.Row="2"  
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Stop of clutch" Background="Red" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3" Grid.Column="2">
-                            <TextBlock Text="Off" Style="{StaticResource btLabel}" />
-                        </Button>
+                       
+                        <Button Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1"  Template="{StaticResource btGreenTemplate}" Content="On"  Height="28" Width="90" FontSize="12"/>
+                        <Button Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="1"  Template="{StaticResource btRedTemplate}" Content="Off"  Height="28" Width="90" FontSize="12"/>
+                        
                     </Grid>
                     <Grid Grid.Column="2" Background="Black" ToolTip="Direction of reel procces">
                         <Grid.ColumnDefinitions>
@@ -276,18 +268,9 @@
                             <RowDefinition Height="10*"/>
                         </Grid.RowDefinitions>
                         <Label Grid.Row="1" Grid.ColumnSpan="4"    Style="{StaticResource Tittle_St}" Margin="4,0,0,0" Width="172" Content="FOWARD DIRECTION"  />
-                        <Button Grid.Row="2"  
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3">
-                            <TextBlock Text="Left" Style="{StaticResource btLabel}" />
-                        </Button>
-                        <Button Grid.Row="2"  
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Right  of derections" Background="#FF9C8446" Grid.RowSpan="3" Height="30" Margin="8,1,8,9" Grid.ColumnSpan="3" Grid.Column="2">
-                            <TextBlock Text="Right" Style="{StaticResource btLabel}" />
-                        </Button>
+                        <Button Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1"  Template="{StaticResource btGreenTemplate}" Content="Left"  Height="28" Width="90" FontSize="12"/>
+                        <Button Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="1"  Template="{StaticResource btGreenTemplate}" Content="Rigth"  Height="28" Width="90" FontSize="12"/>
+                        
                     </Grid>
                 </Grid>
             </Grid>
@@ -353,13 +336,7 @@
                                 </ControlTemplate>
                             </TextBox.Template>
                         </TextBox>
-                        <Button Grid.Column="5"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Reset taime value" Background="#FF9C8446">
-                            <TextBlock Text="RESET" FontFamily="Gotham Pro" Foreground="White" FontSize="12" />
-                        </Button>
+                        <Button Grid.Column="5" Template="{StaticResource btRedTemplate}" Content="Reset"  Height="38" Width="110" FontSize="12"/>
                     </Grid>
                     <!-- Length Mode-->
                     <Grid Style="{StaticResource ReelModeVisLight }" Background="Black"  Grid.Row="2"  >
@@ -398,13 +375,7 @@
                                 </ControlTemplate>
                             </TextBox.Template>
                         </TextBox>
-                        <Button Grid.Column="5"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Reset main lenght value" Background="#FF9C8446">
-                            <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
-                        </Button>
+                        <Button Grid.Column="5" Template="{StaticResource btRedTemplate}" Content="Reset"  Height="38" Width="110" FontSize="12"/>
                     </Grid>
                 </Grid>
                 <!-- Length Mode-->
@@ -440,13 +411,7 @@
                             </ControlTemplate>
                         </TextBox.Template>
                     </TextBox>
-                    <Button Grid.Column="5" Grid.Row="0"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Reset left length value" Background="#FF9C8446">
-                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
-                    </Button>
+                    <Button Grid.Column="5" Grid.Row="0" Template="{StaticResource btRedTemplate}" Content="Reset"  Height="38" Width="110" FontSize="12"/>
                     <Label  Grid.Row="0" Grid.Column="1" Style="{StaticResource General_St}"  Content="Left lenght" />
                     <TextBox Grid.Column="3"  Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Eigth lenght monitor">
                         <TextBox.Template>
@@ -460,13 +425,7 @@
                             </ControlTemplate>
                         </TextBox.Template>
                     </TextBox>
-                    <Button Grid.Column="5" Grid.Row="2"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="40" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Reset right length value" Background="#FF9C8446">
-                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
-                    </Button>
+                    <Button Grid.Column="5" Grid.Row="2" Template="{StaticResource btRedTemplate}" Content="Reset"  Height="38" Width="110" FontSize="12"/>
                     <Label  Grid.Row="2" Grid.Column="1" Style="{StaticResource General_St}" Content="Right lenght"  />
 
 
@@ -513,31 +472,11 @@
                             </ControlTemplate>
                         </TextBox.Template>
                     </TextBox>
-                    <Button Grid.Column="5" Grid.Row="3" 
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                            Margin="8,0,8,0"
-                          ToolTip="Reset run times value" Background="#FF9C8446">
-                        <TextBlock Text="RESET" Style="{StaticResource btLabel}" />
-                    </Button>
-                    <Button Grid.Column="5" Grid.Row="5" 
-                          Style="{StaticResource MaterialDesignRaisedLightButton}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                            Margin="8,0,8,0"
-                          ToolTip="Stop reel process" Background="Red">
-                        <TextBlock Text="Stop" Style="{StaticResource btLabel}" />
-                    </Button>
-                    <Button Grid.Column="3" Grid.Row="5" 
-                          Style="{StaticResource  buttRed}"
-                          Height="38" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Run reel process" 
-                            Margin="8,0,8,0"
-                            Background="Green">
-                         <TextBlock Text="Run" Style="{StaticResource btLabel}" />
-                    </Button>
+                    <Button Grid.Column="5" Grid.Row="3" Template="{StaticResource btRedTemplate}" Content="Reset"  Height="38" Width="110" FontSize="12"/>
+                    <Button Grid.Column="5" Grid.Row="5" Template="{StaticResource btRedTemplate}" Content="Stop"  Height="38" Width="110" FontSize="12"/>
+                    <Button Grid.Column="3" Grid.Row="5" Template="{StaticResource btGreenTemplate}" Content="Run"  Height="38" Width="110" FontSize="12"/>
+
+
                 </Grid>
             </Grid>
         </Grid>
