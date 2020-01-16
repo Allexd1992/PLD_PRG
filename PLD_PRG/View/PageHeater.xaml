@@ -359,18 +359,8 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}" Grid.Row="1"  Content="RUNNING"   Grid.Column="1" Grid.RowSpan="2"  />
-                <Button Grid.Row="3"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Run clutch" Background="Green" Grid.ColumnSpan="3" Margin="12,5,12,7"   >
-                    <TextBlock Text="On" Style="{StaticResource btLabel}" />
-                </Button>
-                <Button Grid.Row="3"   Grid.Column="3"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7"  >
-                    <TextBlock Text="Off" Style="{StaticResource btLabel}" />
-                </Button>
+                <Button Grid.Row="3" ToolTip="Run clutch" Grid.Column="1" Template="{StaticResource btGreenTemplate}" Content="On"/>
+                <Button Grid.Row="3" Grid.Column="3" Template="{StaticResource btRedTemplate}" Content="Off" ToolTip="Stop of clutch" />
             </Grid>
         </Grid>
     </Grid>

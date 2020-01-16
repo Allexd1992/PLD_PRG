@@ -80,18 +80,8 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label  Grid.Row="1" Style="{StaticResource Tittle_St}" Content="AUTO VACUUM"  Margin="0,5,0,5" Grid.Column="1" Grid.RowSpan="2"  />
-                <Button Grid.Row="3"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Run clutch" Background="Green" Grid.ColumnSpan="3" Margin="12,5,12,7"   >
-                    <TextBlock Text="On" Style="{StaticResource btLabel}"  />
-                </Button>
-                <Button Grid.Row="3"   Grid.Column="3"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Stop of clutch" Background="Red" Margin="0,5,0,7"  >
-                    <TextBlock Text="Off" Style="{StaticResource btLabel}"  />
-                </Button>
+                <Button Grid.Row="3" Grid.Column="1" Template="{StaticResource btGreenTemplate}"  Content="On"/>
+                <Button Grid.Row="3" Grid.Column="3" Template="{StaticResource btRedTemplate}"  Content="Off"/>
             </Grid>
             <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="Black" >
                 <Grid.RowDefinitions>
@@ -101,11 +91,8 @@
                 </Grid.RowDefinitions>
                 <!-- MV -->
                 <Label Style="{StaticResource Tittle_St}"  Content="MAIN VALVE" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
 
@@ -116,11 +103,8 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="VENT VALVE" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
             <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="Black" >
@@ -130,11 +114,8 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="FORE LINE VALVE" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
             <Grid Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="Black" >
@@ -144,11 +125,8 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="ROUGHING VALVE" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
 
@@ -159,11 +137,8 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="TURBO MOLECULAR PUMP" FontSize="10" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"/>
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
             <Grid Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5" Background="Black" >
@@ -173,11 +148,8 @@
                     <RowDefinition Height="10*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="ROTARY PUMP" Margin="10,5,0,0"/>
-                <Button Grid.Row="3"   Grid.Column="1" Margin="12"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green"  Height="30"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}" />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}" Margin="10,0,10,0"  >
+                    <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
             </Grid>
 
@@ -201,11 +173,8 @@
                 </Grid.ColumnDefinitions>
                 <Label  Grid.Row="1" Grid.Column="1" Style="{StaticResource Tittle_St}" Content="O2 500SCCM AR GAS INLET VALVE 1" Grid.ColumnSpan="5"/>
 
-                <Button Grid.Row="3"   Grid.Column="1"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green" Grid.ColumnSpan="2" Margin="0,7,18,5" Cursor="Hand"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}">
+                <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
                 <TextBox Grid.Column="5" Grid.Row="3"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30">
                     <TextBox.Template>
@@ -257,11 +226,8 @@
                 <Label  Grid.Row="1" Grid.Column="1" Style="{StaticResource Tittle_St}" Content="O2 500SCCM AR GAS INLET VALVE 2" Grid.ColumnSpan="5"
                         />
 
-                <Button Grid.Row="3"   Grid.Column="1"
-                          Style="{StaticResource MaterialDesignRaisedLightButton}" BorderThickness="0"
-                          materialDesign:ButtonAssist.CornerRadius="5"
-                          ToolTip="Left  of derections" Background="Green" Grid.ColumnSpan="2" Margin="0,7,18,5"  >
-                    <TextBlock Text="Open" Style="{StaticResource btLabel}"  />
+                <Button Grid.Row="3"   Grid.Column="1"  Template="{StaticResource btGreenTemplate}"   >
+                <TextBlock  Style="{StaticResource TextOpCl}" Tag="False" />
                 </Button>
                 <TextBox Grid.Column="5" Grid.Row="3"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Width="90"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30">
                     <TextBox.Template>
@@ -307,15 +273,7 @@
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="TERMOCOUPLE" Margin="10,0,0,0" Grid.Row="1" Grid.ColumnSpan="3" Height="26" Width="142"/>
                 <Label Style="{StaticResource  General_St}"  Content="Set point" Margin="10,0,0,0" Grid.Row="3" Grid.ColumnSpan="3" Height="26" Width="142"/>
-                <TextBox Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control   Grid.Column="2" Grid.Row="3"   Template="{StaticResource blGreen}" Height="20" Width="20"/>
             </Grid>
             <Grid Grid.Row="6" Grid.Column="0" Background="Black" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5">
                 <Grid.ColumnDefinitions>
@@ -332,15 +290,8 @@
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="CP" Margin="10,0,0,0" Grid.Row="1" Grid.ColumnSpan="3" Height="26" Width="142"/>
                 <Label Style="{StaticResource  General_St}"  Content="Status" Margin="10,0,0,0" Grid.Row="3" Grid.ColumnSpan="3" Height="26" Width="142"/>
-                <TextBox Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                
+                <Control   Grid.Column="2" Grid.Row="3"   Template="{StaticResource blGreen}" Height="20" Width="20"/>
             </Grid>
             <Grid Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="4" Grid.RowSpan="4" Background="Black" Margin="5">
                 <Grid.ColumnDefinitions>
@@ -367,62 +318,16 @@
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource Tittle_St}"  Content="COOLANT" Margin="10,0,0,0" Grid.Row="1" Grid.ColumnSpan="2" Height="26" Width="142"/>
                 <Label Style="{StaticResource  General_St}"  Content="Ch.Front" Margin="10,0,0,0" Grid.Row="3" Grid.ColumnSpan="2" Height="26" Width="142"/>
-                <TextBox Grid.Column="3" Grid.Row="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control  Grid.Column="3" Grid.Row="3" Template="{StaticResource blGreen}" Height="20" Width="20"/>
                 <Label Style="{StaticResource  General_St}"  Content="Ch. Side/Back" Margin="10,0,0,0" Grid.Row="5" Grid.ColumnSpan="2" Height="26" Width="142"/>
-                <TextBox Grid.Column="3" Grid.Row="5"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control  Grid.Column="3" Grid.Row="5" Template="{StaticResource blGreen}" Height="20" Width="20"/>
                 <Label Style="{StaticResource  General_St}"  Content="Heater" Margin="10,0,0,0" Grid.Row="7" Grid.ColumnSpan="2" Height="26" Width="142"/>
-                <TextBox Grid.Column="3" Grid.Row="7"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control  Grid.Column="3" Grid.Row="7" Template="{StaticResource blGreen}" Height="20" Width="20"/>
                 <Label Style="{StaticResource  General_St}"  Content="Table" Margin="10,0,0,0" Grid.Row="9" Grid.ColumnSpan="2" Height="26" Width="142"/>
-                <TextBox Grid.Column="3" Grid.Row="9"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control  Grid.Column="3" Grid.Row="9" Template="{StaticResource blGreen}" Height="20" Width="20"/>
                 <Label Style="{StaticResource  General_St}"  Content="Total" Margin="10,0,0,0" Grid.Row="11" Grid.ColumnSpan="2" Height="26" Width="142"/>
-                <TextBox Grid.Column="3" Grid.Row="11"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Gotham Pro" ToolTip="Right tension monitor" Height="30" Width="30" >
-                    <TextBox.Template>
-                        <ControlTemplate>
-                            <Border CornerRadius="3" Padding="3"  BorderThickness="0"   Background="Green" Height="20" Width="20" >
-
-                            </Border>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
+                <Control  Grid.Column="3" Grid.Row="11" Template="{StaticResource blGreen}" Height="20" Width="20"/>
             </Grid>
-
-
-
-
-
-
         </Grid>
     </Grid>
 </Page>
