@@ -176,7 +176,7 @@
         </Style.Triggers>
     </Style>
     <ControlTemplate TargetType="Control" x:Key="blGreen">
-        <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" x:Name="lbBorederGreen" Background="#FF5B5B6E" CornerRadius="2">
+        <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" x:Name="lbBorederGreen" Background="#FF5B5B6E" CornerRadius="3">
             <ContentControl   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontFamily="Gotham Pro" FontSize="{TemplateBinding FontSize}"/>
         </Border>
         <ControlTemplate.Triggers>
@@ -189,7 +189,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <ControlTemplate TargetType="Control" x:Key="blRed">
-        <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" x:Name="lbBorederRed" Background="#FF5B5B6E" CornerRadius="5">
+        <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" x:Name="lbBorederRed" Background="#FF5B5B6E" CornerRadius="3">
             <ContentControl   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontFamily="Gotham Pro" FontSize="{TemplateBinding FontSize}"/>
         </Border>
         <ControlTemplate.Triggers>
@@ -201,5 +201,36 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <ControlTemplate TargetType="TextBox" x:Key="setValue">
+        <Border Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="White" CornerRadius="5" x:Name="setValBorder" >
+            <ContentControl>
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1.1*"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <TextBox  Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=Text}" Style="{StaticResource btLabel2}" Background="Transparent" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" BorderThickness="0"  Foreground="Black" TextAlignment="Center"/>
+                    <Label  Grid.Column="3" Grid.ColumnSpan="1" Content="{TemplateBinding Tag}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="7" Style="{StaticResource Tittle_St}"/>
+                </Grid>
+            </ContentControl>
+        </Border>
+    </ControlTemplate>
+    <ControlTemplate TargetType="TextBox" x:Key="monValue">
+        <Border Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="Gray" CornerRadius="5" x:Name="monValBorder" >
+            <ContentControl>
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1.1*"/>
 
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="3" Text="{TemplateBinding Text}" Style="{StaticResource  btLabel}" Background="Transparent" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12"  Foreground="White" TextAlignment="Center"/>
+                    <Label  Grid.Column="3" Grid.ColumnSpan="1" Content="{TemplateBinding Tag}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="8" Style="{StaticResource Tittle_St}"/>
+                </Grid>
+            </ContentControl>
+        </Border>
+    </ControlTemplate>
 </ResourceDictionary>

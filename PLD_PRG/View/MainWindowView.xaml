@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:mv="clr-namespace:PLD_PRG.ViewModel"
         Title="PLAD-6000S" Height="720" Width="1080" 
-        MaxHeight="720" MaxWidth="1080"
+        MaxHeight="1080" MaxWidth="1920"
         MinHeight="720" MinWidth="1080"
         ResizeMode="NoResize"
         
@@ -76,15 +76,13 @@
                 <Button ToolTip="Heater" Background="Transparent" BorderThickness="0" Height="50" Command="{Binding IHeaterPage}">
                     <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Heater2.png" Margin="3" />
                 </Button>
-
-
-                <Button ToolTip="Event log" Background="Transparent" BorderThickness="0"   Height="50" Command="{Binding IEventLogPage}">
+                <Button ToolTip="Event log" Background="Transparent" BorderThickness="0"   Height="50" Command="{Binding IEventLogPage}" Visibility="Collapsed">
                     <Image Source="E:\VisualStudioProject\PLD_PRG\1x\EventLog.png" Margin="3" />
                 </Button>
-                <Button ToolTip="Logs" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding ILogsPage}">
+                <Button ToolTip="Logs" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding ILogsPage}" Visibility="Collapsed">
                     <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Logs.png" Margin="3" />
                 </Button>
-                <Button  ToolTip="Diagnostic" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding IDiagnosticPage}">
+                <Button  ToolTip="Diagnostic" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding IDiagnosticPage}" Visibility="Collapsed">
                     <Image Source="E:\VisualStudioProject\PLD_PRG\1x\Diagn.png" Margin="3" />
                 </Button>
                 <Button ToolTip="Settings" Background="Transparent" BorderThickness="0"  Height="50" Command="{Binding ISettingPage}">

@@ -40,8 +40,8 @@ namespace PLD_PRG.ViewModel
             }
         }
 
-        private bool pBlMb;
-        public bool BlMb
+        private string pBlMb;
+        public string BlMb
         {
             get { return pBlMb; }
             set
@@ -52,8 +52,8 @@ namespace PLD_PRG.ViewModel
             }
         }
 
-        private bool pBlCom;
-        public bool BlCom
+        private string pBlCom;
+        public string BlCom
         {
             get { return pBlCom; }
             set
@@ -240,7 +240,7 @@ namespace PLD_PRG.ViewModel
             {
                 return new DelegateCommand(() =>
                 {
-                    BlMb = true;
+                    BlMb = "True";
     
 
                 });
@@ -252,7 +252,7 @@ namespace PLD_PRG.ViewModel
             {
                 return new DelegateCommand(() =>
                 {
-                    BlMb = false;
+                    BlMb = "False";
                
                 });
             }
@@ -263,7 +263,7 @@ namespace PLD_PRG.ViewModel
             {
                 return new DelegateCommand(() =>
                 {
-                    BlCom = true;
+                    BlCom = "True";
                     // MainModel.LserComConnect();
                    
 
@@ -278,7 +278,7 @@ namespace PLD_PRG.ViewModel
                 {
 
                     //MainModel.LserComDisconnect();
-                    BlCom = false;
+                    BlCom = "False";
                 });
             }
         }
